@@ -1,0 +1,17 @@
+django
+easy-thumbnails
+djangorestframework
+django-tagging
+django-filter
+django-pygments
+mysql-python
+django-responsive
+stripe
+django-paypal
+python-memcached
+libsass
+django-compressor
+django-sass-processor
+django-ckeditor
+django-markdown
+python-social-auth
