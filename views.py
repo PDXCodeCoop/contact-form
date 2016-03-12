@@ -17,14 +17,14 @@ def index(request):
             '''
             send_mail('Thanks for contacting the Code Coop!',
                           "We got your message! We'll get back to you as soon as we can.",
-                          'admin@code.coop',
+                          'from-example@email.com',
                           [message.email],
                           fail_silently=False
                           )
             send_mail(message.name + ' just sent us a message!',
                       message.message,
-                      'admin@code.coop',
-                      ['bjageman@code.coop'],
+                      'admin-example@email.com',
+                      ['to-example@email.com'],
                       fail_silently=False
                       )
             '''
@@ -39,9 +39,9 @@ def welcomeEmail(message):
     msg_html = render_to_string('email/welcome.html', d)
 
     send_mail(
-        'Thanks for the message! - Code Coop',
+        'Thanks for the message!',
         msg_plain,
-        'admin@code.coop',
+        'from-example@email.com',
         [message.email],
         html_message=msg_html,
     )
@@ -54,7 +54,7 @@ def notifyEmail(message):
     send_mail(
         message.name + ' sent us a message!',
         msg_plain,
-        'admin@code.coop',
-        ["bjageman@code.coop"],
+        'admin-example@email.comp',
+        ["to-example@email.com"],
         html_message=msg_html,
     )
