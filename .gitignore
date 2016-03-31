@@ -2,4 +2,5 @@
 *.pyc
 *.pyo
 *.log
-/migrations/
+**/migrations/
+migrations/
